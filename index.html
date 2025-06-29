@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -162,6 +161,20 @@
     </ul>
   </nav>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <section class="products-grid">
     <div class="product-box">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVR9KWpP1qLxxjgvI6rCcWtaK2fUYdn9HWt5fQlOAmg9SsVktQJTX94WJUtNdcFsKgofU&usqp=CAU" alt="تيشيرت Trapstar أسود">
@@ -188,6 +201,21 @@
       <button data-product="تيشيرت Trapstar أحمر">أضف إلى السلة</button>
     </div>
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
   <div id="order-modal">
     <div class="modal-content">
@@ -226,21 +254,22 @@
       const product = document.getElementById('order-product').value;
 
       if (name && phone && address && product) {
-        const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdX9Vt8HR3GkThijocyvWTiJyGBMBwXldmSHvy3Q4OOgshJUQ/formResponse';
-
         const formData = new FormData();
-        formData.append('entry.1482656329', name);     // الاسم الكامل
-        formData.append('entry.1238810039', phone);    // رقم الهاتف
-        formData.append('entry.2002359276', address);  // العنوان
-        formData.append('entry.1131317693', product);  // المنتج
+        formData.append('الاسم', name);
+        formData.append('الهاتف', phone);
+        formData.append('العنوان', address);
+        formData.append('المنتج', product);
 
-        fetch(formURL, {
-          method: 'POST',
-          mode: 'no-cors',
+        fetch("https://formsubmit.co/bilal5ziani@gmail.com", {
+          method: "POST",
           body: formData
         });
 
-        alert(`✅ تم إرسال طلبك بنجاح!\n\n📦 المنتج: ${product}\n👤 الاسم: ${name}\n📞 الهاتف: ${phone}`);
+        alert(`✅ تم إرسال طلبك بنجاح!
+
+📦 المنتج: ${product}
+👤 الاسم: ${name}
+📞 الهاتف: ${phone}`);
         closeOrderModal();
 
         document.getElementById('order-name').value = '';
