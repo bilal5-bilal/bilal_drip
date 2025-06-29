@@ -233,52 +233,52 @@
     &copy; 2025 white_wf_store - جميع الحقوق محفوظة. برمجة بلال
   </footer>
 
-  <script>
-    const buttons = document.querySelectorAll('.product-box button');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const product = btn.getAttribute('data-product');
-        document.getElementById('order-product').value = product;
-        document.getElementById('order-modal').style.display = 'flex';
-      });
-    });
 
-    function closeOrderModal() {
-      document.getElementById('order-modal').style.display = 'none';
-    }
 
-    function submitOrder() {
-      const name = document.getElementById('order-name').value;
-      const phone = document.getElementById('order-phone').value;
-      const address = document.getElementById('order-address').value;
-      const product = document.getElementById('order-product').value;
 
-      if (name && phone && address && product) {
-        const formData = new FormData();
-        formData.append('الاسم', name);
-        formData.append('الهاتف', phone);
-        formData.append('العنوان', address);
-        formData.append('المنتج', product);
 
-        fetch("https://formsubmit.co/bilal5ziani@gmail.com", {
-          method: "POST",
-          body: formData
-        });
 
-        alert(`✅ تم إرسال طلبك بنجاح!
+<script>
+  function submitOrder() {
+    const name = document.getElementById('order-name').value;
+    const phone = document.getElementById('order-phone').value;
+    const address = document.getElementById('order-address').value;
+    const product = document.getElementById('order-product').value;
 
+    if (name && phone && address && product) {
+      const message = `✅ طلب جديد:
 📦 المنتج: ${product}
 👤 الاسم: ${name}
-📞 الهاتف: ${phone}`);
-        closeOrderModal();
+📞 الهاتف: ${phone}
+📍 العنوان: ${address}`;
 
-        document.getElementById('order-name').value = '';
-        document.getElementById('order-phone').value = '';
-        document.getElementById('order-address').value = '';
-      } else {
-        alert("❗ يرجى ملء جميع الحقول قبل الإرسال.");
-      }
+      const whatsappNumber = "213552486500"; // ← ضع هنا رقمك بدون "+"، وابدأ بـ 213 للجزائر
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+      window.open(url, '_blank'); // يفتح واتساب في نافذة جديدة
+      closeOrderModal();
+
+      // تفريغ الحقول
+      document.getElementById('order-name').value = '';
+      document.getElementById('order-phone').value = '';
+      document.getElementById('order-address').value = '';
+    } else {
+      alert("❗ يرجى ملء جميع الحقول قبل الإرسال.");
     }
-  </script>
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
