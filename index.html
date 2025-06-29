@@ -8,8 +8,7 @@
     * { box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       background: linear-gradient(to bottom, #f3f3f3, #e9eff1);
     }
     header {
@@ -55,11 +54,9 @@
       padding: 0;
       margin: 0;
     }
-    nav li {
-      cursor: pointer;
-      transition: color 0.3s;
-    }
+    nav li { cursor: pointer; transition: color 0.3s; }
     nav li:hover { color: #ffcc00; }
+
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -100,12 +97,14 @@
       transition: background 0.3s;
     }
     .product-box button:hover { background-color: #ff7f00; }
+
     footer {
       background-color: #1e2a38;
       color: white;
       text-align: center;
       padding: 20px;
     }
+
     #order-modal {
       display: none;
       position: fixed;
@@ -161,61 +160,36 @@
     </ul>
   </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <section class="products-grid">
+    <!-- منتجات -->
     <div class="product-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVR9KWpP1qLxxjgvI6rCcWtaK2fUYdn9HWt5fQlOAmg9SsVktQJTX94WJUtNdcFsKgofU&usqp=CAU" alt="تيشيرت Trapstar أسود">
+      <img src="https://i.imgur.com/NqK2AlC.jpeg" alt="تيشيرت Trapstar أسود">
       <div class="product-name">تيشيرت Trapstar أسود</div>
       <div class="product-price">2200 دج</div>
       <button data-product="تيشيرت Trapstar أسود">أضف إلى السلة</button>
     </div>
+
     <div class="product-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOPwfwYLYYsQ3ep_95jFwVHoibHtgMeabXog&s" alt="تيشيرت CRTZ أسود">
-      <div class="product-name">تيشيرت CRTZ أسود</div>
-      <div class="product-price">1800 دج</div>
-      <button data-product="تيشيرت CRTZ أسود">أضف إلى السلة</button>
+      <img src="https://i.imgur.com/5Sx7tXM.jpeg" alt="تيشيرت CRTZ أبيض">
+      <div class="product-name">تيشيرت CRTZ أبيض</div>
+      <div class="product-price">1900 دج</div>
+      <button data-product="تيشيرت CRTZ أبيض">أضف إلى السلة</button>
     </div>
+
     <div class="product-box">
-      <img src="https://i.ebayimg.com/images/g/CBcAAOSw26Nl2OT0/s-l1600.webp" alt="تيشيرت CRTZ رمادي">
+      <img src="https://i.imgur.com/NnUJ5aM.jpeg" alt="تيشيرت CRTZ رمادي">
       <div class="product-name">تيشيرت CRTZ رمادي</div>
       <div class="product-price">2000 دج</div>
       <button data-product="تيشيرت CRTZ رمادي">أضف إلى السلة</button>
     </div>
+
     <div class="product-box">
-      <img src="data:image/jpeg;base64,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" alt="تيشيرت Trapstar أحمر">
+      <img src="https://i.imgur.com/wukKgYY.jpeg" alt="تيشيرت Trapstar أحمر">
       <div class="product-name">تيشيرت Trapstar أحمر</div>
       <div class="product-price">2300 دج</div>
       <button data-product="تيشيرت Trapstar أحمر">أضف إلى السلة</button>
     </div>
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 
   <div id="order-modal">
     <div class="modal-content">
@@ -233,52 +207,43 @@
     &copy; 2025 white_wf_store - جميع الحقوق محفوظة. برمجة بلال
   </footer>
 
+  <script>
+    const buttons = document.querySelectorAll('.product-box button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const product = btn.getAttribute('data-product');
+        document.getElementById('order-product').value = product;
+        document.getElementById('order-modal').style.display = 'flex';
+      });
+    });
 
+    function closeOrderModal() {
+      document.getElementById('order-modal').style.display = 'none';
+    }
 
+    function submitOrder() {
+      const name = document.getElementById('order-name').value;
+      const phone = document.getElementById('order-phone').value;
+      const address = document.getElementById('order-address').value;
+      const product = document.getElementById('order-product').value;
 
+      if (name && phone && address && product) {
+        const message = `📦 طلب جديد:
 
-
-<script>
-  function submitOrder() {
-    const name = document.getElementById('order-name').value;
-    const phone = document.getElementById('order-phone').value;
-    const address = document.getElementById('order-address').value;
-    const product = document.getElementById('order-product').value;
-
-    if (name && phone && address && product) {
-      const message = `✅ طلب جديد:
-📦 المنتج: ${product}
+🔸 المنتج: ${product}
 👤 الاسم: ${name}
 📞 الهاتف: ${phone}
 📍 العنوان: ${address}`;
 
-      const whatsappNumber = "213552486500"; // ← ضع هنا رقمك بدون "+"، وابدأ بـ 213 للجزائر
-      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        const whatsappNumber = "0552486500";
+        const whatsappURL = `https://wa.me/213${whatsappNumber.slice(1)}?text=${encodeURIComponent(message)}`;
 
-      window.open(url, '_blank'); // يفتح واتساب في نافذة جديدة
-      closeOrderModal();
-
-      // تفريغ الحقول
-      document.getElementById('order-name').value = '';
-      document.getElementById('order-phone').value = '';
-      document.getElementById('order-address').value = '';
-    } else {
-      alert("❗ يرجى ملء جميع الحقول قبل الإرسال.");
+        window.open(whatsappURL, "_blank");
+        closeOrderModal();
+      } else {
+        alert("❗ يرجى ملء جميع الحقول قبل الإرسال.");
+      }
     }
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </script>
 </body>
 </html>
